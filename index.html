@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Formulário para cadastro de clientes</title>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+	</head>
+	<body>
+	<div class="container-sm">
+		<h2>
+		 Cadastro de Clientes
+		</h2>
+	</div>
+		
+	<div class="container">
+		<form class="row">
+			<div>
+				<h4>Selecione entre pessoa Física ou Pessoa Jurídica:</h4>
+			</div>
+				
+			<div>
+				<select id="select" onchange="escolha()" style="margin-top: 2px;">
+					<option value=""></option>
+					<option value="CPF">Pessoa Física</option>
+					<option value="CNPJ">Pessoa Jurídica</option>
+				</select>
+			</div>
+		</form>
+			<br/>
+			
+			<form class="row">	
+			
+	<div>
+		<label name="nome">Nome:</label>
+	</div>
+	
+	<div class="col-3">
+		<input name="nome" type="text" class="form-control" style="margin-top: -10px;"></input>
+	</div>
+			
+	<div class="col-2,8" >
+		<p size="4" id="retorno">Digite o:</p>
+			<script>
+				function escolha() 
+				{
+				var x = document.getElementById("select").value;
+				document.getElementById("retorno").innerHTML =  "Digite o " + x;
+				}
+			</script>
+	</div>
+				
+	<div class="col-3">
+		<label></label>
+			<input name="name" type="text" class="form-control" style="margin-top: -35px;"></input>
+	</div>
+				
+	<div class="col-3">
+		<button type="submit" class="btn btn-success" style="margin-top: -10px;">Salvar</button>
+	</div>
+		</form>
+			<br/><br/>
+			<table border="0" class="table table-striped">
+				<colgroup>
+					<col width="500">
+					<col width="250">
+					<col width="325">
+					<col width="325">
+					<col width="325">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>NOME:</th>
+						<th>CPF/CNPJ:</th>
+						<th align="right"></th>
+						<th align="right"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Fulano</td>
+						<td>00.000.000-00</td>
+						<td>
+							<button class="btn btn-warning">Editar</button>
+						</td>
+						<td>
+							<button class="btn btn-danger">Excluir</button>
+						</td>
+					</tr>	
+					<tr>
+						<td>Ciclano LTDA</td>
+						<td>00.000.000/0000-00</td>
+						<td>
+							<button class="btn btn-warning">Editar</button>
+						</td>
+						<td>
+							<button class="btn btn-danger">Excluir</button>
+						</td>
+					</tr>	
+					<tr>
+						<td>Felisbino MEI</td>
+						<td>00.000.000/0000-00</td>
+						<td>
+							<button class="btn btn-warning">Editar</button>
+						</td>
+						<td>
+							<button class="btn btn-danger">Excluir</button>
+						</td>
+					</tr>
+				
+			</table>
+		</div>
+	</body>
+</html>	
